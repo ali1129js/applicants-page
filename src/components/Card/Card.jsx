@@ -13,13 +13,13 @@ const Card = ({ fname, lname, email, phone }) => {
           {lname.charAt(0)}
         </div>
       </div>
-      <div className="">
+      <div className="fullname">
         <strong>
           {fname} {lname}
         </strong>
       </div>
       {phone}
-      <div className="">{email}</div>
+      <div className="email">{email}</div>
     </div>
   );
 };

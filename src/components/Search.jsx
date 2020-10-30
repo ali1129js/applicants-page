@@ -1,44 +1,19 @@
-import React, { useState } from "react";
-import { AiOutlineSearch } from "react-icons/ai";
-const Search = (props) => {
-  const [searchValue, setSearchValue] = useState("");
+import React from "react";
 
-  // const searchResults = () => {
-  //   if (props.results) {
-  //     const resVal = props.results.map(block => (
-  //       <TitleComponent
-  //         key={block.id}
-  //         title={block.title}
-  //         overview={block.overview}
-  //         poster={block.poster_path}
-  //         votes={block.vote_average}
-  //         backdrop={block.backdrop_path}
-  //       />
-  //     ));
-  //     return resVal;
-  //   }
-  // };
+const Search = (props) => {
   const handleInputChanges = (e) => {
-    setSearchValue(e.target.value);
+    props.search(e.target.value);
   };
-  const resetInputField = () => {
-    setSearchValue("");
-  };
-  const callSearchFunction = (e) => {
-    e.preventDefault();
-    props.search(searchValue);
-    resetInputField();
-  };
+
   return (
     <>
       <form className="search">
         <input
-          value={searchValue}
           onChange={handleInputChanges}
           type="text"
-          placeholder="Search for applicant"
+          className="form-control-lg"
+          placeholder="Search for an applicant"
         />
-        <input onClick={callSearchFunction} type="submit" value="Search" />
       </form>
     </>
   );

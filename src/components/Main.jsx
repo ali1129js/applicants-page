@@ -7,8 +7,9 @@ const ListWithLoading = WithLoading(ApplicantsList);
 
 class Main extends Component {
   state = {
-    applicants: null,
+    applicants: [],
     loading: false,
+    searchValue: null,
   };
 
   componentDidMount() {
@@ -20,9 +21,10 @@ class Main extends Component {
       });
   }
 
-  search = () => {
-    console.log("searcj");
+  search = (searchValue) => {
+    this.setState({ searchValue: searchValue });
   };
+
   render() {
     return (
       <main>
@@ -30,6 +32,7 @@ class Main extends Component {
         <ListWithLoading
           isLoading={this.state.loading}
           applicants={this.state.applicants}
+          searchValue={this.state.searchValue}
         />
       </main>
     );
