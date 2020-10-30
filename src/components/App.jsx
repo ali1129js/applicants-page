@@ -4,8 +4,9 @@ import Main from "./Main";
 
 const App = () => (
   <div className="app">
-    <Layout />
-    <Main />
+    <Layout>
+      <Main />
+    </Layout>
   </div>
 );
 

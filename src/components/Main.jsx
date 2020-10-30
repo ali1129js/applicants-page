@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-
-import ApplicantsList from "./ApplicantsList";
 import WithLoading from "./WithLoading";
+import ApplicantsList from "./ApplicantsList";
+import Search from "./Search";
 
 const ListWithLoading = WithLoading(ApplicantsList);
 
@@ -19,12 +19,19 @@ class Main extends Component {
         this.setState({ loading: false, applicants: applicants });
       });
   }
+
+  search = () => {
+    console.log("searcj");
+  };
   render() {
     return (
-      <ListWithLoading
-        isLoading={this.state.loading}
-        applicants={this.state.applicants}
-      />
+      <main>
+        <Search search={this.search} />
+        <ListWithLoading
+          isLoading={this.state.loading}
+          applicants={this.state.applicants}
+        />
+      </main>
     );
   }
 }

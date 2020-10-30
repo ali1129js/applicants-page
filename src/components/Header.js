@@ -11,7 +11,7 @@ const Header = () => {
     <IconContext.Provider
       value={{ style: { fontSize: "30px", color: "rgb(0, 0, 0)" } }}
     >
-      <nav class="navbar navbar-light bg-light">
+      <nav className="navbar navbar-light bg-light">
         <BsList />
         <h3>
           <strong>McMakler</strong>
