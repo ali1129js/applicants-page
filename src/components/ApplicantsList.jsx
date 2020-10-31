@@ -2,7 +2,7 @@ import React from "react";
 import DefaultGrid from "./Grid/DefaultGrid";
 import SearchGrid from "./Grid/SearchGrid";
 
-const ApplicantsList = ({ applicants, searchValue, v2 }) => {
+const ApplicantsList = ({ applicants, searchValue }) => {
   if (!applicants) return null;
   if (!applicants.length) return <p>No applicants, sorry</p>;
 

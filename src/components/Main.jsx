@@ -10,7 +10,6 @@ class Main extends Component {
     applicants: [],
     loading: false,
     searchValue: null,
-    v2: [],
   };
 
   componentDidMount() {
@@ -19,12 +18,6 @@ class Main extends Component {
       .then((json) => json.json())
       .then((applicants) => {
         this.setState({ loading: false, applicants: applicants });
-      });
-
-    fetch(`https://5f9acd1b9d94640016f7146c.mockapi.io/v2`)
-      .then((json) => json.json())
-      .then((categories) => {
-        this.setState({ loading: false, v2: categories });
       });
   }
 
@@ -40,7 +33,6 @@ class Main extends Component {
           isLoading={this.state.loading}
           applicants={this.state.applicants}
           searchValue={this.state.searchValue}
-          v2={this.state.v2}
         />
       </main>
     );
