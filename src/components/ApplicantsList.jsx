@@ -1,25 +1,13 @@
 import React from "react";
-import Card from "./Card/Card";
+import DefaultGrid from "./Grid/DefaultGrid";
+import SearchGrid from "./Grid/SearchGrid";
 
-const ApplicantsList = ({ applicants, searchValue }) => {
+const ApplicantsList = ({ applicants, searchValue, v2 }) => {
   if (!applicants) return null;
   if (!applicants.length) return <p>No applicants, sorry</p>;
+
   if (searchValue === null) {
-    return (
-      <div className="row">
-        {applicants.map((applicant) => {
-          return (
-            <Card
-              key={applicant.id}
-              fname={applicant.fname}
-              lname={applicant.lname}
-              email={applicant.email}
-              phone={applicant.phone}
-            />
-          );
-        })}
-      </div>
-    );
+    return <DefaultGrid applicants={applicants} />;
   } else {
     const filtered = applicants.filter(
       (person) =>
@@ -27,21 +15,7 @@ const ApplicantsList = ({ applicants, searchValue }) => {
         person.lname.toLowerCase().includes(searchValue.toLowerCase()) ||
         person.email.toLowerCase().includes(searchValue.toLowerCase())
     );
-    return (
-      <div className="row">
-        {filtered.map((applicant) => {
-          return (
-            <Card
-              key={applicant.id}
-              fname={applicant.fname}
-              lname={applicant.lname}
-              email={applicant.email}
-              phone={applicant.phone}
-            />
-          );
-        })}
-      </div>
-    );
+    return <SearchGrid applicants={filtered} />;
   }
 };
 export default ApplicantsList;
