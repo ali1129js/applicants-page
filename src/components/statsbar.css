@@ -1,0 +1,8 @@
+li {
+  display: inline-block;
+  border-right: 1px solid lightgray;
+  text-align: center;
+  justify-content: center;
+  padding: 5px 15px 0px 15px;
+  margin: 5px 15px 0px 15px;
+}

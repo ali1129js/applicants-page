@@ -1,0 +1,11 @@
+.top {
+  display: inline-block;
+  width: 100%;
+}
+.search {
+  display: inline-block;
+  float: left;
+}
+.topright {
+  float: right;
+}

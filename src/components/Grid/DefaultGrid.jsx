@@ -10,8 +10,8 @@ const DefaultGrid = ({ applicants }) => {
   return (
     <div className="grid">
       <div className="row">
-        <div className="cataTitle h2 m-3">
-          Appointment set({countAppointments.length})
+        <div className="cataTitle h4 m-3">
+          <strong>Appointment set ({countAppointments.length})</strong>
         </div>
         {applicants.map((applicant) => {
           if (applicant.appointment) {
@@ -32,8 +32,8 @@ const DefaultGrid = ({ applicants }) => {
         })}
       </div>
       <div className="row">
-        <div className="cataTitle h2 m-3">
-          Property Viewed({countViewed.length})
+        <div className="cataTitle h4 m-3">
+          <strong>Property Viewed ({countViewed.length})</strong>
         </div>
         {applicants.map((applicant) => {
           if (applicant.viewed) {
@@ -54,8 +54,8 @@ const DefaultGrid = ({ applicants }) => {
         })}
       </div>
       <div className="row">
-        <div className="cataTitle h2 m-3">
-          Interested({countInterested.length})
+        <div className="cataTitle h4 m-3">
+          <strong>Interested ({countInterested.length})</strong>
         </div>
         {applicants.map((applicant) => {
           if (applicant.interested) {
@@ -76,8 +76,8 @@ const DefaultGrid = ({ applicants }) => {
         })}
       </div>
       <div className="row">
-        <div className="cataTitle h3 m-3">
-          Offer Accepted({countOffer.length})
+        <div className="cataTitle h4 m-3">
+          <strong>Offer Accepted ({countOffer.length})</strong>
         </div>
         {applicants.map((applicant) => {
           if (applicant.offer) {

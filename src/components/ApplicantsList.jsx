@@ -2,12 +2,12 @@ import React from "react";
 import DefaultGrid from "./Grid/DefaultGrid";
 import SearchGrid from "./Grid/SearchGrid";
 
-const ApplicantsList = ({ applicants, searchValue }) => {
+const ApplicantsList = ({ applicants, searchValue, total }) => {
   if (!applicants) return null;
   if (!applicants.length) return <p>No applicants, sorry</p>;
 
   if (searchValue === null) {
-    return <DefaultGrid applicants={applicants} />;
+    return <DefaultGrid applicants={applicants} total={total} />;
   } else {
     const filtered = applicants.filter(
       (person) =>
