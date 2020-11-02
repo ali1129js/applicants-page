@@ -3,6 +3,9 @@ import WithLoading from "./WithLoading";
 import ApplicantsList from "./ApplicantsList";
 import Search from "./Search";
 import StatsBar from "./StatsBar";
+import StatusDrop from "./DropDown/StatusDrop";
+import BidsDrop from "./DropDown/BidsDrop";
+
 import "./main.css";
 
 const ListWithLoading = WithLoading(ApplicantsList);
@@ -17,9 +20,7 @@ class Main extends Component {
 
   componentDidMount() {
     this.setState({ loading: true });
-    fetch(
-      `https://cors-anywhere.herokuapp.com/https://5f9acd1b9d94640016f7146c.mockapi.io/applicants`
-    )
+    fetch(`https://5f9acd1b9d94640016f7146c.mockapi.io/applicants`)
       .then((json) => json.json())
       .then((applicants) => {
         this.setState({ loading: false, applicants: applicants });
@@ -46,16 +47,18 @@ class Main extends Component {
 
     return (
       <main>
+        <StatsBar
+          total={total}
+          newOffer={countOffer.length}
+          viewed={countViewed.length}
+          appointment={countAppointments.length}
+          other={countInterested.length}
+        />
         <div className="top">
-          <StatsBar
-            total={total}
-            newOffer={countOffer.length}
-            viewed={countViewed.length}
-            appointment={countAppointments.length}
-            other={countInterested.length}
-          />
-          <div className="search mt-2">
+          <div className="search">
             <Search search={this.search} />
+            <BidsDrop />
+            <StatusDrop />
           </div>
         </div>
         <ListWithLoading

@@ -7,7 +7,7 @@ const Search = (props) => {
 
   return (
     <>
-      <form className="search">
+      <form>
         <input
           onChange={handleInputChanges}
           type="text"

@@ -2,10 +2,15 @@
   display: inline-block;
   width: 100%;
 }
+
+.topright {
+  float: right;
+}
 .search {
   display: inline-block;
   float: left;
 }
-.topright {
-  float: right;
+form {
+  float: left;
+  margin-left: 2rem;
 }
