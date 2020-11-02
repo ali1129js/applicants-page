@@ -14,8 +14,8 @@ const Search = (props) => {
           <input
             onChange={handleInputChanges}
             type="text"
-            className="form-control-lg"
-            placeholder="Search for an applicant"
+            className="form-control-lg mb-3"
+            placeholder="Search for applicant"
           />
         </div>
       </form>

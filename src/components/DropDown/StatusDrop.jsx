@@ -5,7 +5,7 @@ const StatusDrop = () => {
   return (
     <form>
       <select
-        className="form-select"
+        className="form-select m-1"
         value={value}
         onChange={(e) => setValue(e.target.value)}
       >
