@@ -24,6 +24,7 @@ const DefaultGrid = ({ applicants }) => {
                 phone={applicant.phone}
                 color={applicant.color}
                 timeStamp={applicant.appointment}
+                bids={applicant.bid}
               />
             );
           } else {
@@ -46,6 +47,7 @@ const DefaultGrid = ({ applicants }) => {
                 phone={applicant.phone}
                 color={applicant.color}
                 timeStamp={applicant.viewed}
+                bids={applicant.bid}
               />
             );
           } else {
@@ -68,6 +70,7 @@ const DefaultGrid = ({ applicants }) => {
                 phone={applicant.phone}
                 color={applicant.color}
                 timeStamp={applicant.interested}
+                bids={applicant.bid}
               />
             );
           } else {
@@ -90,6 +93,7 @@ const DefaultGrid = ({ applicants }) => {
                 phone={applicant.phone}
                 color={applicant.color}
                 timeStamp={applicant.offer}
+                bids={applicant.bid}
               />
             );
           } else {

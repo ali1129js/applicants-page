@@ -14,3 +14,11 @@ form {
   float: left;
   margin-left: 2rem;
 }
+input {
+  text-indent: 30px;
+}
+
+.addicon svg {
+  margin: 15px;
+  position: absolute;
+}

@@ -3,6 +3,7 @@ import "./card.css";
 
 const Card = ({ fname, lname, email, phone, color, timeStamp, bids }) => {
   const fixDate = new Date(timeStamp);
+  console.log(bids);
   return (
     <div className="card">
       <div className="avatar" style={{ backgroundColor: color.toString() }}>
@@ -25,6 +26,11 @@ const Card = ({ fname, lname, email, phone, color, timeStamp, bids }) => {
           hour: "numeric",
         })}
       </div>
+      {bids ? (
+        <div className="badge bg-warning ml-5 mr-5 mt-2 mb-2">
+          {bids.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}€
+        </div>
+      ) : null}
     </div>
   );
 };

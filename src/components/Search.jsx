@@ -1,5 +1,5 @@
 import React from "react";
-
+import { GoSearch } from "react-icons/go";
 const Search = (props) => {
   const handleInputChanges = (e) => {
     props.search(e.target.value);
@@ -8,12 +8,16 @@ const Search = (props) => {
   return (
     <>
       <form>
-        <input
-          onChange={handleInputChanges}
-          type="text"
-          className="form-control-lg"
-          placeholder="Search for an applicant"
-        />
+        <div className="addicon">
+          <GoSearch />
+
+          <input
+            onChange={handleInputChanges}
+            type="text"
+            className="form-control-lg"
+            placeholder="Search for an applicant"
+          />
+        </div>
       </form>
     </>
   );
