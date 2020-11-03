@@ -6,7 +6,13 @@ const SearchGrid = ({ applicants }) => {
   const countViewed = applicants.filter((ele) => ele.viewed);
   const countInterested = applicants.filter((ele) => ele.interested);
   const countOffer = applicants.filter((ele) => ele.offer);
-
+  if (!applicants.length) {
+    return (
+      <div className="h2 m-5">
+        <p>No applicants, sorry</p>
+      </div>
+    );
+  }
   return (
     <div className="grid">
       <div className="row">
