@@ -31,6 +31,7 @@ const SearchGrid = ({ applicants }) => {
                 color={applicant.color}
                 timeStamp={applicant.appointment}
                 bids={applicant.bid}
+                title={"appointment"}
               />
             );
           } else {
@@ -54,6 +55,7 @@ const SearchGrid = ({ applicants }) => {
                 color={applicant.color}
                 timeStamp={applicant.viewed}
                 bids={applicant.bid}
+                title={"viewed"}
               />
             );
           } else {
@@ -77,6 +79,7 @@ const SearchGrid = ({ applicants }) => {
                 color={applicant.color}
                 timeStamp={applicant.interested}
                 bids={applicant.bid}
+                title={"viewed"}
               />
             );
           } else {
@@ -100,6 +103,7 @@ const SearchGrid = ({ applicants }) => {
                 color={applicant.color}
                 timeStamp={applicant.offer}
                 bids={applicant.bid}
+                title={"offer"}
               />
             );
           } else {

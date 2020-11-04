@@ -1,7 +1,16 @@
 import React from "react";
 import "./card.css";
 
-const Card = ({ fname, lname, email, phone, color, timeStamp, bids }) => {
+const Card = ({
+  fname,
+  lname,
+  email,
+  phone,
+  color,
+  timeStamp,
+  bids,
+  title,
+}) => {
   const fixDate = new Date(timeStamp);
   return (
     <div className="card">
@@ -20,6 +29,7 @@ const Card = ({ fname, lname, email, phone, color, timeStamp, bids }) => {
       {phone.toString().substr(5, 3)} {phone.toString().substr(8, 5)}
       <div className="email">{email}</div>
       <div className="badge bg-secondary ml-4 mr-4 mt-2 mb-2">
+        {title.toUpperCase()}{" "}
         {fixDate.toLocaleString("de-DE", {
           month: "short",
           day: "numeric",
