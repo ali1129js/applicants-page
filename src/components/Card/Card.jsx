@@ -38,6 +38,7 @@ const Card = ({
       </div>
       {bids ? (
         <div className="badge bg-warning ml-5 mr-5 mt-2 mb-2">
+          {"BID "}
           {bids.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}€
         </div>
       ) : null}
