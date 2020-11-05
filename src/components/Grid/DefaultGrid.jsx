@@ -9,7 +9,7 @@ const DefaultGrid = ({ applicants }) => {
 
   return (
     <div className="grid">
-      <div className="row">
+      <div className="row m-2">
         <div className="cataTitle h4 m-3">
           <strong>Appointment set ({countAppointments.length})</strong>
         </div>
@@ -33,7 +33,7 @@ const DefaultGrid = ({ applicants }) => {
           }
         })}
       </div>
-      <div className="row">
+      <div className="row m-2">
         <div className="cataTitle h4 m-3">
           <strong>Property Viewed ({countViewed.length})</strong>
         </div>
@@ -57,7 +57,7 @@ const DefaultGrid = ({ applicants }) => {
           }
         })}
       </div>
-      <div className="row">
+      <div className="row m-2">
         <div className="cataTitle h4 m-3">
           <strong>Interested ({countInterested.length})</strong>
         </div>
@@ -81,7 +81,7 @@ const DefaultGrid = ({ applicants }) => {
           }
         })}
       </div>
-      <div className="row">
+      <div className="row m-2">
         <div className="cataTitle h4 m-3">
           <strong>Offer Accepted ({countOffer.length})</strong>
         </div>
