@@ -23,6 +23,4 @@ const Search = (props) => {
   );
 };
 export default Search;
-/*
-<div className="row mt-5">{searchResults()}</div>
-*/
+
